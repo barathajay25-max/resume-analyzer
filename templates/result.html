@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Analysis</title>
+</head>
+<body style="font-family: Arial; padding: 40px; max-width:800px;margin:auto;">
+
+    <h1>Resume Analysis</h1>
+
+    <h2>Score: {{ score }}/100</h2>
+
+    <div style="width:300px;border:1px solid black;">
+        <div style="width:{{ score }}%;background:green;color:white;">
+            {{ score }}%
+        </div>
+    </div>
+
+    <h3>Skills Found</h3>
+
+    <ul>
+    {% for skill in found_skills %}
+        <li>{{ skill }}</li>
+    {% endfor %}
+    </ul>
+
+    <h3>Suggestions</h3>
+
+    <ul>
+    {% for suggestion in suggestions %}
+        <li>{{ suggestion }}</li>
+    {% endfor %}
+    </ul>
+
+</body>
+</html>
+<br><br>
+<a href="/">
+    <button>Analyze another Resume</button>
+</a>
